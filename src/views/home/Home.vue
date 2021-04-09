@@ -3,8 +3,9 @@
     <nav-bar class="home-nav">
       <div slot="center">首页</div>
     </nav-bar>
-    <home-swiper :banners="banners"></home-swiper>
-    <home-recommend-view :recommends="recommends"></home-recommend-view>
+    <home-swiper :banners="banners"/>
+    <home-recommend-view :recommends="recommends"/>
+    <home-feature-view/>
   </div>
 </template>
 
@@ -12,6 +13,7 @@
 import NavBar from "@/components/common/navbar/NavBar";
 import HomeSwiper from "@/views/home/childComponents/HomeSwiper";
 import HomeRecommendView from "@/views/home/childComponents/HomeRecommendView";
+import HomeFeatureView from "@/views/home/childComponents/HomeFeatureView";
 
 import {getHomeMultidate} from "@/network/home";
 
@@ -20,7 +22,8 @@ export default {
   components:{
     NavBar,
     HomeSwiper,
-    HomeRecommendView
+    HomeRecommendView,
+    HomeFeatureView
   },
   data(){
     return {
