@@ -4,12 +4,14 @@
       <div slot="center">首页</div>
     </nav-bar>
     <home-swiper :banners="banners"></home-swiper>
+    <home-recommend-view :recommends="recommends"></home-recommend-view>
   </div>
 </template>
 
 <script>
 import NavBar from "@/components/common/navbar/NavBar";
 import HomeSwiper from "@/views/home/childComponents/HomeSwiper";
+import HomeRecommendView from "@/views/home/childComponents/HomeRecommendView";
 
 import {getHomeMultidate} from "@/network/home";
 
@@ -17,11 +19,13 @@ export default {
   name: "home",
   components:{
     NavBar,
-    HomeSwiper
+    HomeSwiper,
+    HomeRecommendView
   },
   data(){
     return {
-      banners:[]
+      banners:[],
+      recommends:[]
     }
   },
   created() {
@@ -34,6 +38,7 @@ export default {
       getHomeMultidate().then(res=>{
         console.log(res);
         this.banners=res.data.banner.list
+        this.recommends=res.data.recommend.list
       })
     }
   }
