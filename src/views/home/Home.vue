@@ -69,7 +69,8 @@ export default {
       refresh:null,
       isTabFixed:false,
       tabOffsetTop:0,
-      saveY:0
+      saveY:0,
+      tabY:0
     }
   },
   computed:{
@@ -176,7 +177,7 @@ export default {
       }).catch(err=>{
         console.log(err);
       })
-    }
+    },
   }
 }
 </script>

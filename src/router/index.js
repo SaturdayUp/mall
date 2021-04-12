@@ -2,14 +2,16 @@
 import Vue from 'vue'
 import VueRouter from "vue-router";
 //使用懒加载的形式导入组件
-// const Home=()=>import('@/views/home/Home')
-// const Category=()=>import('@/views/category/Category')
-// const Cart=()=>import('@/views/cart/Cart')
-// const Profile=()=>import('@/views/profile/Profile')
-import Home from "@/views/home/Home"
-import Category from "@/views/category/Category"
-import Cart from "@/views/cart/Cart"
-import Profile from "@/views/profile/Profile"
+const Home=()=>import('@/views/home/Home')
+const Category=()=>import('@/views/category/Category')
+const Cart=()=>import('@/views/cart/Cart')
+const Profile=()=>import('@/views/profile/Profile')
+const Detail=()=>import('@/views/detail/Detail')
+// import Home from "@/views/home/Home"
+// import Category from "@/views/category/Category"
+// import Cart from "@/views/cart/Cart"
+// import Profile from "@/views/profile/Profile"
+// import Detail from "@/views/detail/Detail";
 Vue.config.productionTip=false
 
 //2.安装vue-router插件
@@ -36,6 +38,10 @@ const routes=[
   {
     path:'/profile',
     component:Profile
+  },
+  {
+    path: '/detail/:iid',
+    component:Detail
   }
 ]
 

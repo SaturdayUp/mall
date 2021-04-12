@@ -1,6 +1,6 @@
 <template>
   <div class="goods-list-item">
-    <img :src="showImage" alt="" @load="imgLoad">
+    <img :src="showImage" alt="" @load="imgLoad" @click="clickItem">
       <div class="goods-info">
         <p>{{item.title}}</p>
         ￥<span class="price">{{item.price}}</span>
@@ -32,6 +32,11 @@ export default {
       //所以这里我们使用事件总线eventbus进行发送，否则GoodListItem还要向GoodsList发送事件，然后GoodsList再向home发送事件
       //这样十分麻烦
       this.$bus.$emit('itemImgLoad')
+    },
+    //点击商品，跳转到详情页
+    clickItem(){
+      //点击商品，跳转到详情页，并将对应的商品id传递过去
+      this.$router.push('/detail/'+this.item.iid)
     }
   }
 }
