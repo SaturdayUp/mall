@@ -38,5 +38,11 @@ export default {
 </script>
 
 <style scoped>
-
+#main-tab-bar{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+}
 </style>

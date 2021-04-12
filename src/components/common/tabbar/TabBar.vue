@@ -20,5 +20,6 @@ export default {
   bottom: 0px;
   background-color: #ffffff;
   box-shadow: 0 -1px 10px #999999;
+  touch-action: none;
 }
 </style>
