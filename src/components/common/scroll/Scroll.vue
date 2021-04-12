@@ -16,6 +16,10 @@ export default {
       type:Number,
       default:0
     },
+    pullUpLoad:{
+      type:Boolean,
+      default: false
+    }
   },
   data(){
     return{
@@ -27,6 +31,8 @@ export default {
     this.scroll=new BScroll(this.$refs.wrapper,{
       //在这里传入一些对于better-scroll基本的要求参数
       probeType:this.probeType,
+      pullUpLoad: this.pullUpLoad,
+      click:true,
       observeDOM:true
     })
     //2.监听滚动的位置
@@ -35,7 +41,15 @@ export default {
         //调用scroll的on进行监听实时位置，传入两个参数，每次滚动时调用第二个参数传入的函数
         this.scroll.on('scroll',(position)=>{
           //向外面发送scroll事件，并将此时的position作为参数传出去
+          // console.log(position);
           this.$emit('scroll',position)
+
+        })
+      }
+    //3.完成上拉加载更多功能
+      if (this.pullUpLoad){
+        this.scroll.on('pullingUp',()=>{
+          this.$emit('pullingUp')
         })
       }
   },
@@ -43,6 +57,12 @@ export default {
   methods:{
     scrollTo(x,y,time=300){
       this.scroll&&this.scroll.scrollTo(x,y,time)
+    },
+    refresh(){
+      this.scroll&&this.scroll.refresh()
+    },
+    finishPullUp(){
+      this.scroll&&this.scroll.finishPullUp()
     }
   }
 }

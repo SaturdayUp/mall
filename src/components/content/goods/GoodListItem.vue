@@ -1,6 +1,6 @@
 <template>
   <div class="goods-list-item">
-    <img :src="showImage" alt="">
+    <img :src="showImage" alt="" @load="imgLoad">
       <div class="goods-info">
         <p>{{item.title}}</p>
         ￥<span class="price">{{item.price}}</span>
@@ -25,6 +25,15 @@ export default {
       return this.item.image||this.item.show.img
     }
   },
+  methods:{
+    //每张图片加载完毕之后调用一次imgLoad，重新计算高度
+    imgLoad(){
+      //加载完一张图片就向home发送一次图片加载完成的事件,因为向home发送事件并不是简单的父子组件之间的通信
+      //所以这里我们使用事件总线eventbus进行发送，否则GoodListItem还要向GoodsList发送事件，然后GoodsList再向home发送事件
+      //这样十分麻烦
+      this.$bus.$emit('itemImgLoad')
+    }
+  }
 }
 </script>
 
