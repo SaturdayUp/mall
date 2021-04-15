@@ -37,6 +37,7 @@ export default {
 <style scoped>
 .detail-base-info{
   padding: 0px 8px;
+  border-bottom: 5px solid #eeeeee;
 }
 .info-title{
   margin: 7px 4px;
@@ -81,7 +82,7 @@ export default {
 }
 .shop-service-item{
   flex: 1;
-  font-size: 14px;
+  font-size: 13px;
   text-align: center;
 }
 .shop-service-item img{

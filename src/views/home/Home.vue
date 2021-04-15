@@ -111,6 +111,9 @@ export default {
   deactivated() {
     //当离开时，保存此时的位置
     this.saveY=this.$refs.scroll.scroll.y
+    //当该组件处于不活跃状态时，我们此时并不需要再去接收图片加载完成的事件了，因为在详情页里也有goodslist加载
+    //当详情页图片加载完毕之后我们不希望此时的home中还在监听这个事件，就需要把这个事件取消掉
+    this.$bus.$off('itemImageLoad',this.itemImgListener)
   },
   methods:{
     /**

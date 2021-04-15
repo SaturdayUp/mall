@@ -18,8 +18,8 @@ export default {
   right: 0;
   left: 0;
   bottom: 0px;
+  border-top: 1px solid #eee;
   background-color: #ffffff;
-  box-shadow: 0 -1px 10px #999999;
   touch-action: none;
 }
 </style>
