@@ -19,7 +19,7 @@ export default {
     pullUpLoad:{
       type:Boolean,
       default: false
-    }
+    },
   },
   data(){
     return{
@@ -64,7 +64,8 @@ export default {
     finishPullUp(){
       this.scroll&&this.scroll.finishPullUp()
     }
-  }
+  },
+
 }
 </script>
 
