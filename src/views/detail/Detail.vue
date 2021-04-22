@@ -2,7 +2,6 @@
   <div id="detail">
     <detail-nav-bar @clickTitle="clickTitle" ref="detailNavBar"/>
     <scroll class="content" ref="scroll" @scroll="contentScroll" :probe-type="3">
-      <div>{{$store.state.cartList.length}}</div>
       <detail-swiper :top-images="topImages"/>
       <detail-base-info :goods="goods"/>
       <detail-shop-info :shop-info="shop"/>

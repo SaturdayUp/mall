@@ -1,6 +1,6 @@
 <template>
   <grid-view>
-<!--    <good-list-item v-for="(item,index) in categoriesDetail" :key="index" :goods="item"> </good-list-item>-->
+    <good-list-item v-for="(item,index) in categoriesDetail" :key="index" :goods="item"> </good-list-item>
   </grid-view>
 </template>
 
@@ -14,12 +14,12 @@ export default {
     GoodListItem
   },
   props: {
-    // categoriesDetail:{
-    //   type:Array,
-    //   default(){
-    //     return []
-    //   }
-    // }
+    categoriesDetail:{
+      // type:Array,
+      default(){
+        return []
+      }
+    }
   },
 }
 </script>
