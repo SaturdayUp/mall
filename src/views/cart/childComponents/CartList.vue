@@ -31,7 +31,7 @@ export default {
 .cart-list{
   position: absolute;
   top: 44px;
-  bottom: 49px;
+  bottom: 89px;
   left: 0;
   right: 0;
   overflow: hidden;

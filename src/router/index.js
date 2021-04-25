@@ -48,7 +48,7 @@ const routes=[
 //4.创建router对象
 const router=new VueRouter({
   routes,
-  mode:"history"
+  mode:"hash"
 })
 //5.将router导出
 export default router
