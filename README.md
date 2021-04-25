@@ -1,26 +1,9 @@
 # mall
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
+##  Vue商城demo
+### 主要技术：
+####  1.组件化开发
+####  2.vue-router路由
+####  3.vuex状态管理
+####  4.axios网络封装请求网络数据
+####  5.better-scroll库
+####  6.图片懒加载
