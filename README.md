@@ -2,6 +2,8 @@
 ##  Vue商城demo
 ### 主要技术：
 *  组件化开发
+   * 利用组件化技术进行开发，真个项目分为home、detail、category、cart和profile五大模块
+   * 对于公共组件采用抽取的方式进行开发，便于复用和维护
 *  vue-router路由
 *  vuex状态管理
 *  axios网络封装请求网络数据
