@@ -15,4 +15,7 @@
  ![image](https://github.com/SaturdayUp/mall/blob/75a1f1f8c8d4e0b0e7c3d8d453838d09ef9feb7f/%E8%AF%A6%E6%83%85%E9%A1%B5.png)
  
 * 分类页：
-* ![image](https://github.com/SaturdayUp/mall/blob/b25e385d9fcce556bcd318b2cb570226bb756dbe/%E5%88%86%E7%B1%BB.png)
+ ![image](https://github.com/SaturdayUp/mall/blob/b25e385d9fcce556bcd318b2cb570226bb756dbe/%E5%88%86%E7%B1%BB.png)
+ 
+* 购物车：
+![image](https://github.com/SaturdayUp/mall/blob/6824d74772c3c013a2dd5bce3b35e2a3947ced3a/%E8%B4%AD%E7%89%A9%E8%BD%A6.png)
