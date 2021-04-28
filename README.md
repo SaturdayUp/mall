@@ -1,14 +1,16 @@
 # mall
 ##  Vue商城demo
 ### 主要技术：
-*  组件化开发
-   * 利用组件化技术进行开发，真个项目分为home、detail、category、cart和profile五大模块
+*  利用webpack构建整个项目
+*  vue组件化开发
+   * 利用组件化技术进行开发，整个项目分为home、detail、category、cart和profile五大模块
    * 对于公共组件采用抽取的方式进行开发
 *  vue-router路由
    * 组件间跳转使用vue-router来进行管理
 *  vuex状态管理
    * 对于购物车中的商品信息通过vuex来管理状态  
 *  axios网络封装请求网络数据
+   * 整个项目并未使用原生的AJAX进行网络请求，而是使用基于Promise封装的axios  
 *  better-scroll库
 ### 项目展示：
 *  首页：
